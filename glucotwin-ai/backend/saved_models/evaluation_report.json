@@ -1,0 +1,130 @@
+{
+  "evaluation_date": "2026-10-06T14:12:36.089746",
+  "total_patients": 50,
+  "test_patient_ids": [
+    "PT-101",
+    "PT-102",
+    "PT-103",
+    "PT-104",
+    "PT-105",
+    "PT-106",
+    "PT-107",
+    "PT-108",
+    "PT-109",
+    "PT-110"
+  ],
+  "n_train_samples": 26560,
+  "n_test_samples": 6640,
+  "models": {
+    "logistic_regression": {
+      "model_name": "Logistic Regression (Baseline)",
+      "roc_auc": 0.9769,
+      "pr_auc": 0.9642,
+      "f1": 0.8858,
+      "precision": 0.8685,
+      "recall": 0.9039,
+      "confusion_matrix": [
+        [
+          4015,
+          316
+        ],
+        [
+          222,
+          2087
+        ]
+      ],
+      "description": "Linear baseline with balanced class weights on standardized features."
+    },
+    "xgboost": {
+      "model_name": "XGBoost Classifier (Primary)",
+      "roc_auc": 0.9894,
+      "pr_auc": 0.9833,
+      "f1": 0.9217,
+      "precision": 0.9338,
+      "recall": 0.9099,
+      "confusion_matrix": [
+        [
+          4182,
+          149
+        ],
+        [
+          208,
+          2101
+        ]
+      ],
+      "description": "Gradient-boosted decision trees with clinical interaction terms."
+    },
+    "random_forest": {
+      "model_name": "Random Forest",
+      "roc_auc": 0.9831,
+      "pr_auc": 0.9752,
+      "f1": 0.9074,
+      "precision": 0.9154,
+      "recall": 0.8995,
+      "confusion_matrix": [
+        [
+          4139,
+          192
+        ],
+        [
+          232,
+          2077
+        ]
+      ],
+      "description": "Ensemble bagging model serving as non-linear benchmark."
+    }
+  },
+  "trajectory_metrics": {
+    "+30m": {
+      "mae": 7.5,
+      "rmse": 18.83
+    },
+    "+60m": {
+      "mae": 10.19,
+      "rmse": 21.48
+    },
+    "+90m": {
+      "mae": 12.67,
+      "rmse": 23.9
+    },
+    "+120m": {
+      "mae": 14.48,
+      "rmse": 26.03
+    }
+  },
+  "feature_importances": {
+    "age": 0.0041,
+    "bmi": 0.0301,
+    "diabetes_duration_years": 0.005,
+    "hba1c": 0.0779,
+    "fasting_glucose": 0.0294,
+    "systolic_bp": 0.0066,
+    "diastolic_bp": 0.0097,
+    "has_insulin": 0.0,
+    "has_metformin": 0.0,
+    "num_medications": 0.0163,
+    "current_glucose": 0.229,
+    "glucose_delta_15m": 0.0127,
+    "glucose_delta_30m": 0.011,
+    "glucose_slope_hourly": 0.0067,
+    "glucose_roll_mean_1h": 0.1033,
+    "glucose_roll_std_1h": 0.0061,
+    "glucose_roll_mean_3h": 0.0195,
+    "heart_rate": 0.0116,
+    "hr_roll_mean_1h": 0.0255,
+    "hr_delta_1h": 0.0063,
+    "hrv": 0.004,
+    "hrv_roll_mean_1h": 0.0057,
+    "steps_1h": 0.0057,
+    "steps_3h": 0.0088,
+    "sleep_duration_hours": 0.0094,
+    "sleep_quality_score": 0.2226,
+    "time_since_meal_min": 0.0257,
+    "meal_carbs_recent": 0.0386,
+    "sleep_debt_glucose_interaction": 0.0072,
+    "activity_glucose_ratio": 0.0056,
+    "carb_activity_balance": 0.0058,
+    "bmi_glucose_slope_interaction": 0.0267,
+    "metabolic_strain_index": 0.0233
+  }
+}
