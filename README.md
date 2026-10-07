@@ -3,6 +3,7 @@
 > **“Simulate the Patient. Predict the Risk. Act Before the Spike.”**
 
 [![Challenge](https://img.shields.io/badge/Challenge-Happiest%20Health%20Digital%20Twin%202026-emerald?style=for-the-badge)](https://happiesthealth.com)
+[![Demo Video](https://img.shields.io/badge/Demo%20Video-YouTube%20(15--20%20min)-red?style=for-the-badge&logo=youtube)](https://youtu.be/vMN9JIIlMq4)
 [![Status](https://img.shields.io/badge/Status-Functional%20Research%20Prototype-blue?style=for-the-badge)](#)
 [![License](https://img.shields.io/badge/License-MIT-teal?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.14-blue?style=for-the-badge)](https://python.org)
@@ -383,7 +384,8 @@ glucotwin-ai/
 ---
 
 ## 27. 15-20 Minute Demo Video Link
-- 🎥 **Demo Video (Unlisted YouTube):** [Watch GlucoTwin AI 15–20 Minute Walkthrough on YouTube](https://youtu.be/DEMO_VIDEO_UNLISTED) *(Unlisted Video uploaded for jury evaluation)*
+- 🎥 **Demo Video (Unlisted YouTube):** [**Watch GlucoTwin AI 15–20 Minute Video Demonstration on YouTube**](https://youtu.be/vMN9JIIlMq4)  
+  *Direct Link: `https://youtu.be/vMN9JIIlMq4` (Uploaded as Unlisted for Happiest Health 2026 Jury Evaluation)*
 - 📄 **Full Video Presentation Script & Slide-by-Slide Transcript:** [`docs/PRESENTATION_SCRIPT.md`](docs/PRESENTATION_SCRIPT.md)
 
 ## 28. Architecture Diagram in PDF/PPT Format
