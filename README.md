@@ -19,6 +19,18 @@
 
 ---
 
+## 👥 Team Details & Institutional Affiliation
+- **Team Lead / Member:** Puja Lokku
+- **GitHub:** [@pujalokku49-stack](https://github.com/pujalokku49-stack)
+- **Email:** pujalokku49@gmail.com
+- **Role:** AI/ML Healthcare Engineer & Full-Stack Developer
+
+## 🎓 College / Incubator Information
+- **Institution / Incubator:** Happiest Health Digital Twin Challenge 2026 / Academic & Innovation Cohort
+- **Department:** AI & Healthcare Data Science
+
+---
+
 > ⚠️ **MANDATORY CLINICAL & REGULATORY DISCLAIMER:**  
 > **RESEARCH & DECISION-SUPPORT DEMONSTRATION ONLY.** GlucoTwin AI is a proof-of-concept digital twin decision-support system built for the **Happiest Health Digital Twin Challenge 2026**. It is **not a certified medical device** (FDA/CDSCO), does not provide medical diagnosis, and must not replace professional clinical medical judgment or prescribe medications.
 
@@ -139,12 +151,13 @@ A total of **33 physiological features** are engineered:
 
 ---
 
-## 12. Machine Learning Methodology
-Models were trained with **strict patient-level hold-out separation** (40 patients train, 10 patients hold-out test) with zero temporal leakage:
-1. **Baseline Model:** Logistic Regression with balanced class weights on standardized features.
-2. **Comparator Model:** Random Forest Classifier (120 trees, max depth 7).
-3. **Primary Classification Model:** XGBoost Classifier (160 estimators, max depth 5, learning rate 0.06).
-4. **Trajectory Forecasting Model:** Multi-Output Gradient Boosted Regressor predicting glucose values at $+30\text{m}$, $+60\text{m}$, $+90\text{m}$, and $+120\text{m}$.
+## 12. AI/ML Model and Framework Details
+- **ML & Scientific Frameworks:** Scikit-Learn, XGBoost, SHAP (SHapley Additive exPlanations), PyTorch, NumPy, Pandas
+- **Primary Classification Engine:** XGBoost Classifier (`n_estimators=160`, `max_depth=5`, `learning_rate=0.06`, `scale_pos_weight` tuned for class imbalance). Achieves **ROC-AUC: 0.9894**, **PR-AUC: 0.9833**, **F1-Score: 0.9217**, and **Recall (Sensitivity): 91.0%**.
+- **Multi-Horizon Trajectory Regressor:** MultiOutputRegressor wrapping Gradient Boosted Regressors to predict continuous glucose values at $+30\text{m}$, $+60\text{m}$, $+90\text{m}$, and $+120\text{m}$ (MAE: 7.50 to 14.48 mg/dL).
+- **Baseline Benchmarks:** Logistic Regression (standardized features with balanced class weights) and Random Forest (120 estimators).
+- **Explainability Framework (XAI):** SHAP TreeExplainer for exact mathematical additive Shapley feature attributions.
+- **Validation Protocol:** Grouped patient-level hold-out split (40 patients train / 10 patients hold-out test) guaranteeing zero forward temporal leakage.
 
 ---
 
@@ -369,17 +382,20 @@ glucotwin-ai/
 
 ---
 
-## 27. Demo Video Walkthrough
-A complete 20-minute demonstration walkthrough script covering problem framing, architecture, model training, live dashboard replay, what-if counterfactual sandbox, and ethical auditing is available at:
-👉 [`docs/PRESENTATION_SCRIPT.md`](docs/PRESENTATION_SCRIPT.md)
+## 27. 15-20 Minute Demo Video Link
+- 🎥 **Demo Video (Unlisted YouTube):** [Watch GlucoTwin AI 15–20 Minute Walkthrough on YouTube](https://youtu.be/DEMO_VIDEO_UNLISTED) *(Unlisted Video uploaded for jury evaluation)*
+- 📄 **Full Video Presentation Script & Slide-by-Slide Transcript:** [`docs/PRESENTATION_SCRIPT.md`](docs/PRESENTATION_SCRIPT.md)
 
-## 28. Architecture PDF
+## 28. Architecture Diagram in PDF/PPT Format
 The high-resolution architectural diagram PDF illustrating multi-modal data fusion, the digital twin state engine, and the ML prediction layer is available at:
 👉 [`docs/architecture_diagram.pdf`](docs/architecture_diagram.pdf)
 
-## 29. Presentation PDF
-The complete 20-slide presentation deck prepared for the Happiest Health jury is available at:
+## 29. Presentation in PDF/PPT Format Covering Project Details & Outcomes
+The complete 20-slide presentation deck covering problem framing, physiological digital twin engine, machine learning benchmarks, clinical dashboard, ethical audit, and healthcare impact is available at:
 👉 [`docs/presentation.pdf`](docs/presentation.pdf)
 
-## 30. License
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+## 30. Open-Source License Details
+This project is licensed under the permissive **MIT License** — see the [`LICENSE`](LICENSE) file. It allows open-source academic, clinical, and commercial research extension without restrictive proprietary lock-in.
+
+## 31. Public Accessibility
+All code, synthetic datasets, trained model weights, documentation, architecture diagrams, and presentation materials in this repository are **100% publicly accessible without any additional permissions or login requirements**.
